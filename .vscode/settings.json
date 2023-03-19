@@ -1,4 +1,5 @@
 {
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "eslint.run": "onSave",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
