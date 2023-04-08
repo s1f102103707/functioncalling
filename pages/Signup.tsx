@@ -20,7 +20,7 @@ import {
   getIdToken,
   getAuth,
 } from 'firebase/auth'
-import { auth } from '../components/lib/firebase/firebase'
+import { auth } from '../server/components/lib/firebase/firebase'
 import firebase from '@firebase/app-compat'
 import 'firebase/compat/auth'
 import { sendEmailVerification } from '@firebase/auth'
@@ -63,7 +63,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
   async function authenticate(this: any) {
     console.log(6)
-    const authen = getAuth()
+    //const authen = getAuth()
     try {
       //ユーザーを登録
       console.log(8)
