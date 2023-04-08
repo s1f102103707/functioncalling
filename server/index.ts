@@ -1,16 +1,3 @@
-/*import Fastify from 'fastify'
-import cors from '@fastify/cors'
-import fastifyPrismaClient from 'fastify-prisma-client'
-import type { FastifyInstance } from 'fastify'
-import fastifyJwt from '@fastify/jwt'
-*/
-
-/*const prisma = new PrismaClient()
-const fastify: FastifyInstance = Fastyfi()
-fastify.register(fastyfyPrismaClient)*/
-//import fastifyPrismaClient from 'fastify-prisma-client'
-//import type { Prisma } from '@prisma/client'
-
 import type { FastifyInstance } from 'fastify'
 import Fastify from 'fastify'
 import { fastify as f } from 'fastify'

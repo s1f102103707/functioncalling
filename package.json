@@ -27,6 +27,7 @@
     "recoil": "^0.7.7"
   },
   "devDependencies": {
+    "@fastify/cors": "^8.2.1",
     "@firebase/app-compat": "^0.2.7",
     "@mui/icons-material": "^5.11.16",
     "@types/bcrypt": "^5.0.0",
