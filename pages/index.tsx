@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     //タグを選択したら
     console.log(tag)
     //setSelectedTag(tag)
-    const InputText = tag + 'とはどういう意味ですか？'
+    const InputText = '${tag}とはどういう意味ですか？'
     await axios
       .post('http://localhost:8080/text', { InputText })
       .then((response) => {

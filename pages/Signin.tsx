@@ -16,8 +16,12 @@ import axios from 'axios'
 import Router from 'next/router'
 import firebase from '@firebase/app-compat'
 import 'firebase/compat/auth'
-import { FirebaseError, getApp } from 'firebase/app';
-import { createUserWithEmailAndPassword, getIdToken, getAuth } from 'firebase/auth';
+import { FirebaseError, getApp } from 'firebase/app'
+import {
+  createUserWithEmailAndPassword,
+  getIdToken,
+  getAuth,
+} from 'firebase/auth'
 
 const theme = createTheme()
 

@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
-import { Box, Chip } from '@mui/material';
+import { useState } from 'react'
+import type React from 'react'
+import { Box, Chip } from '@mui/material'
 
 interface TagsProps {
-  tags: string[];
-  onSelectTag: (tag: string) => void;
+  tags: string[]
+  onSelectTag: (tag: string) => void
 }
 
 const Tags: React.FC<TagsProps> = ({ tags, onSelectTag }) => {
-  const [selectedTag, setSelectedTag] = useState('');
+  const [selectedTag, setSelectedTag] = useState('')
 
   const handleClick = (tag: string) => {
-    setSelectedTag(tag);
-    onSelectTag(tag);
-  };
+    setSelectedTag(tag)
+    onSelectTag(tag)
+  }
 
   return (
     <Box>
@@ -23,13 +24,18 @@ const Tags: React.FC<TagsProps> = ({ tags, onSelectTag }) => {
           onClick={() => handleClick(tag)}
           style={
             tag === selectedTag
-              ? { backgroundColor: 'blue', color: 'white', marginRight: '5px', marginBottom: '5px' }
+              ? {
+                  backgroundColor: 'blue',
+                  color: 'white',
+                  marginRight: '5px',
+                  marginBottom: '5px',
+                }
               : { marginRight: '5px', marginBottom: '5px' }
           }
         />
       ))}
     </Box>
-  );
-};
+  )
+}
 
-export default Tags;
+export default Tags
