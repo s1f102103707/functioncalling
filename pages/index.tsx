@@ -4,6 +4,8 @@ import QuestionForm from '../components/QuestionForm'
 import Tags from '../components/Tags'
 import { TagArr } from '../components/TagArr'
 import { Message } from '../Types/types'
+import AppRibon from '../components/AppRibon'
+
 import axios from 'axios'
 
 const Home: React.FC = () => {
@@ -39,7 +41,7 @@ const Home: React.FC = () => {
   }
   return (
     <div>
-      <h1>疑問解決アプリ</h1>
+      <AppRibon />
       <Tags
         tags={TagArr}
         onSelectTag={handleTagSelect}
