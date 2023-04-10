@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material'
+import { AppBar, Toolbar, Typography, Button, Box, Link } from '@mui/material'
 const AppRibon = () => {
   return (
     <>
@@ -8,15 +8,20 @@ const AppRibon = () => {
       >
         <Toolbar>
           <Typography
-            variant="h6"
+            variant="h4"
             component="div"
             sx={{ flexGrow: 0 }}
           >
             Shibaku
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
-          <Button color="inherit">マイページ</Button>
-          <Button color="inherit">アップグレード</Button>
+          <Link
+            href="/Pricing"
+            underline="none"
+            sx={{ color: 'inherit' }}
+          >
+            <Button color="inherit">アップグレード</Button>
+          </Link>
         </Toolbar>
       </AppBar>
       <Box sx={{ mt: 2 }} />{' '}

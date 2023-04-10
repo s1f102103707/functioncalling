@@ -16,11 +16,13 @@ import axios from 'axios'
 import Router from 'next/router'
 import firebase from '@firebase/app-compat'
 import 'firebase/compat/auth'
+import { auth } from '../server/components/lib/firebase/firebase'
 import { FirebaseError, getApp } from 'firebase/app'
 import {
   createUserWithEmailAndPassword,
   getIdToken,
   getAuth,
+  signInWithEmailAndPassword,
 } from 'firebase/auth'
 
 const theme = createTheme()
@@ -29,7 +31,7 @@ const theme = createTheme()
 const router = Router
 const userMail = {
   key: 'userData',
-  default: '',
+  default: ' ',
 }
 //usestateでindivdata
 
@@ -39,16 +41,15 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   //----------formのデータを取り出す
   const data = new FormData(e.currentTarget)
   const indivData = {
-    mail: data.get('email'),
+    email: data.get('email'),
     password: data.get('password'),
-    faculty: data.get('faculty'),
   }
 
   //--------user情報をserverに送信
   function sendToServer() {
     console.log(1)
     axios
-      .post('http://localhost:8080/data', indivData)
+      .post('http://localhost:8080/login', indivData)
       .then(async () => {
         console.log(2)
         console.log('postの成功。')
@@ -60,22 +61,31 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     console.log(3)
   }
 
-  async function authenticate(this: any) {
-    console.log(6)
+  async function authenticate() {
     try {
       console.log(7)
+      console.log(indivData)
       // メールアドレスとパスワードを使って認証
-      await firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
+      await signInWithEmailAndPassword(
+        auth,
+        indivData.email as string,
+        indivData.password as string
+      )
       console.log(8)
 
       // IDトークン（JWT）取得
-      const token = await firebase.auth().currentUser!.getIdToken(true)
+      /*
+      const token = await firebase
+        .auth()
+        .currentUser.getIdToken(true)
+        .then(() => {
+          console.log(token)
+        })
+      console.log(token)
 
       // ローカルストレージに保存
       localStorage.setItem('token', token)
-
+*/
       // 認証後のページに遷移
       this.$router.push('/')
     } catch (e) {
@@ -153,7 +163,7 @@ export default function SignIn() {
                 <TextField
                   required
                   fullWidth
-                  id="email"
+                  id="mail"
                   label="メールアドレス"
                   name="email"
                   autoComplete="email"

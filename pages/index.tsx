@@ -7,13 +7,22 @@ import { Message } from '../Types/types'
 import AppRibon from '../components/AppRibon'
 
 import axios from 'axios'
+import { TextField } from '@mui/material'
+import { wordCountState } from '../recoil/wordCountState'
+import { useRecoilValue } from 'recoil'
 
 const Home: React.FC = () => {
   const [displayText, setDisplayText] = useState('')
   const [selectTag, setSelectTag] = useState('')
+  const wordCount = useRecoilValue(wordCountState)
 
   const handleQuestionSubmit = async (question: string) => {
-    const InputText = `私は○○学部の学生です。${selectTag}分野に関する授業で、${question}というテーマについてのレポートを○○文字で作成してください。レポートには自分の考えと定量的データに基づき論理的に構成され、また、その参照元を載せてください。`
+    if (question === '') {
+      return
+    } else if (selectTag === '') {
+      return
+    }
+    const InputText = `私は学生です。${selectTag}分野に関する授業で、${question}というテーマについてのレポートを${wordCount}文字で作成してください。レポートには自分の考えと定量的データに基づき論理的に構成され、また、その参照元を載せてください。`
     console.log(InputText)
     await axios
       .post('http://localhost:8080/text', { InputText })
@@ -39,6 +48,7 @@ const Home: React.FC = () => {
 
     //await main(tag + 'はどういう意味ですか？')
   }
+
   return (
     <div>
       <AppRibon />
@@ -47,6 +57,7 @@ const Home: React.FC = () => {
         onSelectTag={handleTagSelect}
       />
       <QuestionForm onSubmit={handleQuestionSubmit} />
+
       <textarea
         readOnly
         style={{

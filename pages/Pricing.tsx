@@ -91,11 +91,11 @@ function PricingContent() {
           </Typography>
           <nav />
           <Button
-            href="#"
+            href="/"
             variant="outlined"
             sx={{ my: 1, mx: 1.5 }}
           >
-            Login
+            ホーム
           </Button>
         </Toolbar>
       </AppBar>
