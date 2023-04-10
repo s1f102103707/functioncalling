@@ -73,7 +73,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         indivData['password'] as string
       )
         .then((userCredential) => {
-          console.log('userCredential')
+          console.log(userCredential)
         })
         .catch((error) => {
           const errorCode = error.code

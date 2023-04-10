@@ -7,12 +7,12 @@ const firestore_1 = require("firebase/firestore");
 console.log(9);
 //環境変数から読み込むとできなかったので直接書き込んでGitignore
 exports.firebaseConfig = {
-    apiKey: 'AIzaSyCJxTcezuGGtbXFIRUK9fiIZF2jBSDc788',
-    authDomain: 'shibaku-892f3.firebaseapp.com',
-    projectId: 'shibaku-892f3',
-    storageBucket: 'shibaku-892f3.appspot.com',
-    messagingSenderId: '221279536313',
-    appId: '1:221279536313:web:d2d8208e3d5a33ed3bc768',
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     //なんだこれmeasurementId: 'G-D15NBQV17E',
 };
 console.log(2);

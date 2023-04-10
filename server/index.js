@@ -1,10 +1,4 @@
 "use strict";
-/*import Fastify from 'fastify'
-import cors from '@fastify/cors'
-import fastifyPrismaClient from 'fastify-prisma-client'
-import type { FastifyInstance } from 'fastify'
-import fastifyJwt from '@fastify/jwt'
-*/
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
