@@ -27,6 +27,9 @@
     "react-hook-form": "^7.43.7",
     "recoil": "^0.7.7"
   },
+  "resolutions": {
+    "@types/react": "^17.0.19"
+  },
   "devDependencies": {
     "@fastify/cors": "^8.2.1",
     "@firebase/app-compat": "^0.2.7",
