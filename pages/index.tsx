@@ -22,8 +22,7 @@ const Home: React.FC = () => {
     } else if (selectTag === '') {
       return
     }
-    const InputText = `私は学生です。${selectTag}分野に関する授業で、${question}というテーマについてのレポートを${wordCount}文字程度で作成してください。レポートには自分の考えと定量的データに基づき論理的に構成され、また、その参照元を載せてください。`
-    console.log(InputText)
+    const InputText = `私は学生です。${selectTag}分野に関する授業で、${question}というテーマについてのレポートを${wordCount}文字程度で作成してください。レポートには自分の考えと定量的データに基づき論理的に構成され、また、その参照元を載せてください。参照元は文字数とは関係なく出力してください。`
     await axios
       .post('http://localhost:8080/text', { InputText })
       .then((response) => {
