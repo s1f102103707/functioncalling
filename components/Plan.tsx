@@ -1,4 +1,4 @@
-import type { PricingPlan } from '../types/pricing'
+import type { PricingPlan } from '../Types/pricing'
 import styles from '../styles/Pricing.module.css'
 
 type Props = {

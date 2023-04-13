@@ -15,7 +15,7 @@
     "types": ["@stripe/stripe-js"],
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*", "lib/*"]
+      "*": ["node_modules/*", "lib/*", "components/*", "types/*"]
     },
     "jsx": "preserve",
     "incremental": true
