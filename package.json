@@ -54,7 +54,7 @@
     "webpack": "^5.78.0",
     "webpack-cli": "^5.0.1"
   },
-  "name": "chiebukuroGPT",
+  "name": "hitorigurashiGPT",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/konjikun/hitorigurashiGPT.git",
