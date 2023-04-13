@@ -22,7 +22,7 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ onSubmit }) => {
   const handleWordCountChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setWordCount(event.target.value)
+    setWordCount(event.target.value as unknown as number)
   }
 
   return (
@@ -30,7 +30,7 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ onSubmit }) => {
       <TextField
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
-        label="report title"
+        label="レポートタイトル"
         fullWidth
         margin="normal"
         InputLabelProps={{ shrink: true }}
@@ -44,7 +44,7 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ onSubmit }) => {
       </Button>
       <TextField
         id="word-count"
-        label="Word Count"
+        label="文字数"
         type="number"
         value={wordCount}
         onChange={handleWordCountChange}

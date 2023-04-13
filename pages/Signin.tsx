@@ -29,10 +29,7 @@ const theme = createTheme()
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const router = Router
-const userMail = {
-  key: 'userData',
-  default: ' ',
-}
+
 //usestateでindivdata
 
 //ボタンが押されたときの処理
@@ -57,13 +54,13 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       })
       .catch((err) => {
         console.log('psqlへのデータの送信エラー')
+        console.log(err)
       })
     console.log(3)
   }
 
   async function authenticate() {
     try {
-      console.log(7)
       console.log(indivData)
       // メールアドレスとパスワードを使って認証
       await signInWithEmailAndPassword(
@@ -71,7 +68,6 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         indivData.email as string,
         indivData.password as string
       )
-      console.log(8)
 
       // IDトークン（JWT）取得
       /*

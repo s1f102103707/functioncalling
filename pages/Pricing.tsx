@@ -95,7 +95,7 @@ function PricingContent() {
             variant="outlined"
             sx={{ my: 1, mx: 1.5 }}
           >
-            ホーム
+            HOME{' '}
           </Button>
         </Toolbar>
       </AppBar>
