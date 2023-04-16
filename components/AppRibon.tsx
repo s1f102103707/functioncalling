@@ -14,6 +14,7 @@ const AppRibon = () => {
           >
             Shibaku
           </Typography>
+          {/*
           <Box sx={{ flexGrow: 1 }} />
           <Link
             href="/Pricing"
@@ -22,6 +23,7 @@ const AppRibon = () => {
           >
             <Button color="inherit">アップグレード</Button>
           </Link>
+  */}
         </Toolbar>
       </AppBar>
       <Box sx={{ mt: 2 }} />{' '}

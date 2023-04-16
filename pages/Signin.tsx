@@ -44,24 +44,19 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 
   //--------user情報をserverに送信
   function sendToServer() {
-    console.log(1)
     axios
-      .post('http://localhost:8080/login', indivData)
+      .post('https://shibaku.herokuapp.com/login', indivData)
       .then(async () => {
-        console.log(2)
         console.log('postの成功。')
         router.push('/')
       })
       .catch((err) => {
-        console.log('psqlへのデータの送信エラー')
         console.log(err)
       })
-    console.log(3)
   }
 
   async function authenticate() {
     try {
-      console.log(indivData)
       // メールアドレスとパスワードを使って認証
       await signInWithEmailAndPassword(
         auth,
@@ -86,15 +81,12 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       this.$router.push('/')
     } catch (e) {
       // 認証エラー、トークン取得エラー時
-      console.log(9)
       console.log(e)
     }
   }
 
-  console.log(4)
   authenticate()
   sendToServer()
-  console.log(5)
 }
 
 export default function SignIn() {

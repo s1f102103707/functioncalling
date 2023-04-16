@@ -26,13 +26,11 @@ const Home: React.FC = () => {
     await axios
       .post('http://localhost:8080/text', { InputText })
       .then((response) => {
-        console.log(response.data)
         console.log('postの成功。')
         setDisplayText(response.data)
       })
       .catch((error) => {
         console.log('バックエンドへの送信エラー')
-        console.log(3)
       })
     //質問を英語にするためのA理
     //console.log(1)PIに投げる処理

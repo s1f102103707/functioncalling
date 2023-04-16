@@ -7,11 +7,13 @@ const AppRibon = () => {
         position="static"
         color="primary"
       >
+        {/*
         <Toolbar>
           <Box sx={{ flexGrow: 1 }} />
           <Button color="inherit">マイページ</Button>
           <Button color="inherit">アップグレード</Button>
         </Toolbar>
+  */}
       </AppBar>
       {/* 既存のページコンテンツ */}
     </>

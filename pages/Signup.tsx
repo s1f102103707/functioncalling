@@ -31,8 +31,6 @@ const theme = createTheme()
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const router = Router
 
-//usestateでindivdata
-console.log(-1)
 //ボタンが押されたときの処理
 const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault()
@@ -45,40 +43,34 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     faculty: data.get('faculty'),
   }
 
-  console.log(0)
-
   //--------user情報をserverに送信
   async function sendToServer() {
-    console.log(1)
     try {
       await axios.post('http://localhost:8080/data', indivData)
-      console.log(2)
       console.log('postの成功。')
       router.push('/')
     } catch (err) {
-      console.log('psqlへのデータの送信エラー')
+      console.log(err)
     }
-    console.log(3)
   }
 
   async function authenticate(this: any) {
-    console.log(6)
     //const authen = getAuth()
     try {
       //ユーザーを登録
-      console.log(8)
       createUserWithEmailAndPassword(
         auth,
         indivData['mail'] as string,
         indivData['password'] as string
       )
         .then((userCredential) => {
-          console.log(userCredential)
+          console.log('ユーザー登録に成功')
         })
         .catch((error) => {
           const errorCode = error.code
           const errorMessage = error.message
-          console.log('認証エラー')
+          console.log(errorCode)
+          console.log(errorMessage)
           // ..
         })
       //トークンを取得
@@ -93,12 +85,8 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     }
   }
 
-  console.log(4)
-
   await authenticate()
   await sendToServer()
-
-  console.log(5)
 }
 
 export default function SignUp() {

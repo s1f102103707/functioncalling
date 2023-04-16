@@ -1,3 +1,4 @@
+/*
 import type { PricingPlan } from '../Types/pricing'
 import styles from '../styles/Pricing.module.css'
 
@@ -16,3 +17,4 @@ export function Plan({ plan }: Props) {
     </div>
   )
 }
+*/

@@ -1,3 +1,4 @@
+/*
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js'
 import { useState } from 'react'
 import type { PricingPlan } from '../Types/pricing'
@@ -56,3 +57,4 @@ export function CheckoutForm({ plan }: Props) {
     </form>
   )
 }
+*/
