@@ -25,6 +25,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.7",
+    "react-scripts": "^5.0.1",
     "recoil": "^0.7.7"
   },
   "resolutions": {
@@ -36,9 +37,9 @@
     "@mui/icons-material": "^5.11.16",
     "@stripe/react-stripe-js": "^2.1.0",
     "@types/bcrypt": "^5.0.0",
-    "@types/node": "^18.15.11",
-    "@types/react": "^17.0.56",
-    "@types/react-dom": "^17.0.19",
+    "@types/node": "^18.17.1",
+    "@types/react": "^17.0.62",
+    "@types/react-dom": "^17.0.20",
     "@types/readline-sync": "^1.4.4",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
@@ -49,19 +50,29 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "firebase": "^9.19.1",
-    "openai": "^3.2.1",
+    "openai": "^3.3.0",
     "prettier": "^2.8.7",
     "readline-sync": "^1.4.10",
     "ts-dotenv": "^0.9.1",
     "ts-loader": "^9.4.2",
-    "typescript": "^5.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
     "webpack": "^5.78.0",
     "webpack-cli": "^5.0.1"
   },
-  "name": "hitorigurashiGPT",
+  "name": "hitorigurashigpt",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/konjikun/hitorigurashiGPT.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konjikun/hitorigurashiGPT.git"
+  },
   "author": "konjikun <shintaniallen@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konjikun/hitorigurashiGPT/issues"
+  },
+  "homepage": "https://github.com/konjikun/hitorigurashiGPT#readme",
+  "keywords": [],
+  "description": ""
 }

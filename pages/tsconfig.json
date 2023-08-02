@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "scripts": {
+    "start": "react-scripts start"
+  }
+}
