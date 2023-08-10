@@ -1,4 +1,3 @@
-import type React from 'react'
 import { useState } from 'react'
 import QuestionForm from '../components/QuestionForm'
 import Tags from '../components/Tags'
